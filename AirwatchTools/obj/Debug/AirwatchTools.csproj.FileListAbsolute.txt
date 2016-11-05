@@ -1,1 +1,14 @@
 Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\bin\Debug\AirwatchTools.exe.config
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\AirwatchTools.csprojResolveAssemblyReference.cache
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\MainWindow.g.cs
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\App.g.cs
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\AirwatchTools_MarkupCompile.cache
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\AirwatchTools_MarkupCompile.lref
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\bin\Debug\AirwatchTools.exe
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\bin\Debug\AirwatchTools.pdb
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\MainWindow.baml
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\AirwatchTools.g.resources
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\AirwatchTools.Properties.Resources.resources
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\AirwatchTools.csproj.GenerateResource.Cache
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\AirwatchTools.exe
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\AirwatchTools.pdb

@@ -5,8 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AirwatchTools"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="700" Width="700">
     <Grid>
+        <Menu x:Name="mainMenu" VerticalAlignment="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open Csv" Click="btnCreateCsv_Click"></MenuItem>
+                <MenuItem Header="_Exit" Click="btnExit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Action">
+                <MenuItem Header="_Visualize Csv" Click="btnAdd_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_About">
+                <MenuItem Header="_About"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Button x:Name="btnCreateCsv" Content="Create CSV" HorizontalAlignment="Left" Margin="10,274,0,0" VerticalAlignment="Top" Width="75" Click="btnCreateCsv_Click"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="136,54,0,0" VerticalAlignment="Top" Width="75" Click="btnAdd_Click" RenderTransformOrigin="0.373,0.627"/>
+        <Button x:Name="btnAppend" Content="Append CSV" HorizontalAlignment="Left" Margin="90,274,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.123,0.068"/>
         
+        <TextBox x:Name="tbInput" HorizontalAlignment="Left" Height="169" Margin="10,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="672"/>
+        <TextBox x:Name="tbAdd" HorizontalAlignment="Left" Height="23" Margin="11,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+       
+        <Label x:Name="label" Content="Add A User" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Edit The List" HorizontalAlignment="Left" Margin="11,74,0,0" VerticalAlignment="Top"/>
+        <ScrollViewer  Name="Scroller"  Background="Black" Height="254" Margin="10,300,0,0" VerticalAlignment="Top" Width="672">
+            <ItemsControl ItemsSource="{Binding ConsoleOutput, Mode=OneWay}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=.}" Foreground="Green" FontFamily="Consolas" FontSize="16" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+       
+        <Image x:Name="awLogo" Source="Resources\wolf.png" HorizontalAlignment="Left" Height="100" Margin="582,559,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>
