@@ -16,12 +16,12 @@
                 <MenuItem Header="_Visualize Csv" Click="btnAdd_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="_About">
-                <MenuItem Header="_About"></MenuItem>
+                <MenuItem Header="_About" Click="btnAbout_Click"></MenuItem>
             </MenuItem>
         </Menu>
         <Button x:Name="btnCreateCsv" Content="Create CSV" HorizontalAlignment="Left" Margin="10,274,0,0" VerticalAlignment="Top" Width="75" Click="btnCreateCsv_Click"/>
         <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="136,54,0,0" VerticalAlignment="Top" Width="75" Click="btnAdd_Click" RenderTransformOrigin="0.373,0.627"/>
-        <Button x:Name="btnAppend" Content="Append CSV" HorizontalAlignment="Left" Margin="90,274,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.123,0.068"/>
+        <Button x:Name="btnAppend" Content="Append CSV" HorizontalAlignment="Left" Margin="90,274,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.123,0.068" Click="btnAppend_Click"/>
         
         <TextBox x:Name="tbInput" HorizontalAlignment="Left" Height="169" Margin="10,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="672"/>
         <TextBox x:Name="tbAdd" HorizontalAlignment="Left" Height="23" Margin="11,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

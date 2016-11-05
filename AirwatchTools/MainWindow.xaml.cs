@@ -10,9 +10,7 @@ namespace AirwatchTools {
         }
 
         //TOOLBAR MENU EVENT HANDLERS
-        private void btnCreateCsv_Click(object sender, RoutedEventArgs e) {
-
-        }
+        
 
         private void btnExit_Click(object sender, RoutedEventArgs e) {
 
@@ -21,9 +19,20 @@ namespace AirwatchTools {
         private void Visualize_Click(object sender, RoutedEventArgs e) {
 
         }
+        private void btnAbout_Click(object sender, RoutedEventArgs e) {
+
+        }
 
         //MAIN PAGE BUTTON EVENT HANDLERS
         private void btnAdd_Click(object sender, RoutedEventArgs e) {
+
+        }
+
+        private void btnCreateCsv_Click(object sender, RoutedEventArgs e) {
+
+        }
+
+        private void btnAppend_Click(object sender, RoutedEventArgs e) {
 
         }
     }
