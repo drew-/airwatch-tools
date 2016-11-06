@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Media;
+using Microsoft.Win32;
 
 namespace AirwatchTools {
     /// <summary>
@@ -14,6 +16,8 @@ namespace AirwatchTools {
         //PUBLIC METHODS
         public MainWindow() {
             InitializeComponent();
+
+            DataContext = dc;
 
             this.Title = "AirWolf Configuration";
             this.Background = Brushes.DarkGray;
@@ -45,6 +49,16 @@ namespace AirwatchTools {
             Visualizer v = new Visualizer(airwatchEntries);
             v.Show();
         }
+
+        private void ImportNamesFromExcel_Click(object sender, RoutedEventArgs e) {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            if(dialog.ShowDialog() == true) {
+
+            }
+        }
+
         private void btnAbout_Click(object sender, RoutedEventArgs e) {
             About about = new About();
             about.Show();
@@ -67,18 +81,13 @@ namespace AirwatchTools {
             bool result = val.IsValid();
 
             if (result) {
-                List<string> names = val.GetUserList();
+                List<string> userNames = val.GetUserList();
 
-                dc.ConsoleInput = ">> " + names.Count.ToString() + " Users in list...";
+                dc.ConsoleInput = ">> " + userNames.Count.ToString() + " Users in list...";
                 Scroll();
 
-                AdGrabber grabber = new AdGrabber();
-                airwatchEntries = grabber.GetUserInfo(names);
-
-                //ADInfoGetter getter = new ADInfoGetter();
-                //getter.GetUserInfo(name);
-
-                //CsvBuilder builder = new CsvBuilder("andy.csv");
+                AdGrabber grabber = new AdGrabber(userNames);
+                airwatchEntries = grabber.GetUserInfo();
 
                 dc.ConsoleInput = ">> List generated..";
                 Scroll();
@@ -104,6 +113,8 @@ namespace AirwatchTools {
                     tbAdd.Text = "";
                 }
             }
-        }   
+        }
+
+        
     }
 }

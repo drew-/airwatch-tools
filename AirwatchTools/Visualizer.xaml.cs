@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
+using System.Windows.Media;
 
 namespace AirwatchTools {
     /// <summary>
@@ -15,6 +11,10 @@ namespace AirwatchTools {
             InitializeComponent();
 
             dgCsvData.IsReadOnly = true;
+            dgCsvData.AlternationCount = 2;
+            dgCsvData.AlternatingRowBackground = new SolidColorBrush(Color.FromRgb(204, 153, 153));
+            dgCsvData.Background = new SolidColorBrush(Color.FromRgb(102, 102, 204));
+
             dgCsvData.ItemsSource = entries;
         }
 

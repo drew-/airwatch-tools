@@ -9,16 +9,22 @@
     <Grid>
         <Menu x:Name="mainMenu" VerticalAlignment="Top">
             <MenuItem Header="_File">
+                <MenuItem Header="_Open" />
+                <MenuItem Header="_Save" />
+                <MenuItem Header="_Save As" />
+                <Separator />
                 <MenuItem Header="_Open Csv" Click="btnCreateCsv_Click"></MenuItem>
                 <MenuItem Header="_Save Csv" />
                 <MenuItem Header="_Export to Excel" />
+                <Separator />
                 <MenuItem Header="_Exit" Click="btnExit_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="_Edit">
                 <MenuItem Header="_Preferences"></MenuItem>
             </MenuItem>
-            <MenuItem Header="_Action">
+            <MenuItem Header="_Actions">
                 <MenuItem Header="_Visualize Csv" Click="Visualize_Click"></MenuItem>
+                <MenuItem Header="_Import Names From Excel" Click="ImportNamesFromExcel_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="_About">
                 <MenuItem Header="_About" Click="btnAbout_Click"></MenuItem>
@@ -34,7 +40,7 @@
         <Label x:Name="label" Content="Add A User By AD Account Name" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Edit The List" HorizontalAlignment="Left" Margin="11,74,0,0" VerticalAlignment="Top"/>
         <ScrollViewer  Name="Scroller"  Background="Black" Height="254" Margin="10,300,0,0" VerticalAlignment="Top" Width="672">
-            <ItemsControl ItemsSource="{Binding ConsoleOutput, Mode=OneWay}">
+            <ItemsControl ItemsSource="{Binding ConsoleOutput, Mode=OneWay}" Padding="10, 0, 10, 0">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Path=.}" Foreground="Green" FontFamily="Consolas" FontSize="16" />
