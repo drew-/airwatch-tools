@@ -1,5 +1,7 @@
-﻿namespace AirwatchTools {
-    class AirWatchEntry {
+﻿using System.ComponentModel;
+
+namespace AirwatchTools {
+    public class AirWatchEntry : INotifyPropertyChanged {
         public string Username { get; set; }
         public string Password { get; set; }
         public string Active { get; set; }
@@ -45,5 +47,7 @@
         public string CustomAttributeName1 { get; set; }
         public string CustomAttributeName2 { get; set; }
         public string CustomAttributeName3 { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

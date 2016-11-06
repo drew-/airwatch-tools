@@ -13,7 +13,7 @@
                 <MenuItem Header="_Exit" Click="btnExit_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="_Action">
-                <MenuItem Header="_Visualize Csv" Click="btnAdd_Click"></MenuItem>
+                <MenuItem Header="_Visualize Csv" Click="Visualize_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="_About">
                 <MenuItem Header="_About" Click="btnAbout_Click"></MenuItem>

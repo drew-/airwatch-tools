@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Visualizer" Height="700" Width="1000">
     <Grid>
-        <DataGrid x:Name="dgCsvData"  Height="600" VerticalAlignment="Top">
+        <DataGrid Name="dgCsvData"  Height="600" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Username" Binding="{Binding Username}" />
                 <DataGridTextColumn Header="Password" Binding="{Binding Password}" />

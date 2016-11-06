@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.Windows;
 
 namespace AirwatchTools {
@@ -10,8 +11,10 @@ namespace AirwatchTools {
     /// Interaction logic for Visualizer.xaml
     /// </summary>
     public partial class Visualizer : Window {
-        public Visualizer() {
+        public Visualizer(ObservableCollection<AirWatchEntry> entries) {
             InitializeComponent();
+
+            dgCsvData.ItemsSource = entries;
         }
 
         //VIZUALIZER PAGE BUTTON EVENT HANDLERS

@@ -14,3 +14,4 @@ Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\Airwa
 Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\AirwatchTools.pdb
 Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\Visualizer.g.cs
 Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\Visualizer.baml
+Z:\Users\jamyers.ANDY0\Documents\Visual Studio 2015\Projects\AirwatchTools\AirwatchTools\obj\Debug\AirwatchTools.About.resources
