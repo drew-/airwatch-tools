@@ -61,6 +61,7 @@ namespace AirwatchTools {
                 tbAdd.Text = "";
             }
         }
+
         private void btnGenerateList_Click(object sender, RoutedEventArgs e) {
             ValidateInput val = new ValidateInput(tbInput.Text);
             bool result = val.IsValid();
@@ -84,7 +85,7 @@ namespace AirwatchTools {
             }
         }
         private void btnCreateCsv_Click(object sender, RoutedEventArgs e) {
-
+            CsvBuilder buidler = new CsvBuilder("andy.csv", airwatchEntries);
         }
 
         private void btnAppend_Click(object sender, RoutedEventArgs e) {

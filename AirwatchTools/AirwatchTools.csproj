@@ -66,6 +66,8 @@
     </Compile>
     <Compile Include="AdGrabber.cs" />
     <Compile Include="AirWatchElements.cs" />
+    <Compile Include="CsvBuilder.cs" />
+    <Compile Include="HeaderBuilder.cs" />
     <Compile Include="ValidateInput.cs" />
     <Compile Include="Visualizer.xaml.cs">
       <DependentUpon>Visualizer.xaml</DependentUpon>
@@ -119,7 +121,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\airwolf.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Wolf.png" />
   </ItemGroup>

@@ -10,7 +10,12 @@
         <Menu x:Name="mainMenu" VerticalAlignment="Top">
             <MenuItem Header="_File">
                 <MenuItem Header="_Open Csv" Click="btnCreateCsv_Click"></MenuItem>
+                <MenuItem Header="_Save Csv" />
+                <MenuItem Header="_Export to Excel" />
                 <MenuItem Header="_Exit" Click="btnExit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Preferences"></MenuItem>
             </MenuItem>
             <MenuItem Header="_Action">
                 <MenuItem Header="_Visualize Csv" Click="Visualize_Click"></MenuItem>
@@ -26,7 +31,7 @@
         <TextBox x:Name="tbInput" HorizontalAlignment="Left" Height="169" Margin="10,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="672"/>
         <TextBox x:Name="tbAdd" HorizontalAlignment="Left" Height="23" Margin="11,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
        
-        <Label x:Name="label" Content="Add A User" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Add A User By AD Account Name" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Edit The List" HorizontalAlignment="Left" Margin="11,74,0,0" VerticalAlignment="Top"/>
         <ScrollViewer  Name="Scroller"  Background="Black" Height="254" Margin="10,300,0,0" VerticalAlignment="Top" Width="672">
             <ItemsControl ItemsSource="{Binding ConsoleOutput, Mode=OneWay}">
@@ -39,6 +44,7 @@
         </ScrollViewer>
        
         <Image x:Name="awLogo" Source="Resources\wolf.png" HorizontalAlignment="Left" Height="100" Margin="582,559,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="Airwolf" Source="Resources\airwolf.png" Height="90" Width="500" Margin="64,568,128,11" />
         <Button x:Name="btnGenerateList" Content="Generate List" HorizontalAlignment="Left" Margin="15,275,0,0" VerticalAlignment="Top" Width="75" Click="btnGenerateList_Click"/>
     </Grid>
 </Window>

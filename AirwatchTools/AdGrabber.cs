@@ -74,8 +74,6 @@ namespace AirwatchTools {
                             case "Device Friendly Name":
                                 entry.DeviceFriendlyName = "?WT";
                                 break;
-                            case "Device Serial Number":
-                                break;
                             case "Device Platform":
                                 entry.DevicePlatform = "Windows Desktop";
                                 break;
@@ -91,6 +89,14 @@ namespace AirwatchTools {
             }
 
             return entries;
+        }
+
+        public void GetAccountsFromUserName() {
+
+        }
+
+        public void GetAccountsFromFirstAndLastName() {
+
         }
     }
 
