@@ -56,6 +56,7 @@
                 <DataGridTextColumn Header="CustomAttributeName3" Binding="{Binding CustomAttributeName3}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnEdit" Content="Enable Editing" Click="Edit_Click" HorizontalAlignment="Left" Margin="28,605,0,0" VerticalAlignment="Top" Width="100"/>   
+        <Button x:Name="btnEdit" Content="Enable Editing" Click="Edit_Click" HorizontalAlignment="Left" Margin="28,605,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btnScan" Content="Scan Mode On " HorizontalAlignment="Left" Margin="133,605,0,0" VerticalAlignment="Top" Width="100" Click="btnScan_Click"/>
     </Grid>
 </Window>

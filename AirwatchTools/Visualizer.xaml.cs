@@ -14,11 +14,22 @@ namespace AirwatchTools {
         public Visualizer(ObservableCollection<AirWatchEntry> entries) {
             InitializeComponent();
 
+            dgCsvData.IsReadOnly = true;
             dgCsvData.ItemsSource = entries;
         }
 
         //VIZUALIZER PAGE BUTTON EVENT HANDLERS
         private void Edit_Click(object sender, RoutedEventArgs e) {
+            if (dgCsvData.IsReadOnly == true) {
+                dgCsvData.IsReadOnly = false;
+                btnEdit.Content = "Disable Editing";
+            } else {
+                dgCsvData.IsReadOnly = true;
+                btnEdit.Content = "Enable Editing";
+            }
+        }
+
+        private void btnScan_Click(object sender, RoutedEventArgs e) {
 
         }
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Media;
 
@@ -8,8 +9,9 @@ namespace AirwatchTools {
     /// </summary>
     public partial class MainWindow : Window {
         ObservableCollection<AirWatchEntry> airwatchEntries = new ObservableCollection<AirWatchEntry>();
+        ConsoleContent dc = new ConsoleContent();
 
-
+        //PUBLIC METHODS
         public MainWindow() {
             InitializeComponent();
 
@@ -23,8 +25,12 @@ namespace AirwatchTools {
 
             tbAdd.KeyDown += TbInput_KeyDown;
             tbAdd.Background = SystemColors.ControlBrush; ;
+        }
 
-            //airwatchEntries.Add(new AirWatchEntry { FirstName = "Andy", LastName = "Myers", Active = "1", EmailAddress="me@here.com" });
+        //PRIVATE METHODS
+        void Scroll() {
+            dc.RunCommand();
+            Scroller.ScrollToBottom();
         }
 
         //TOOLBAR MENU EVENT HANDLERS
@@ -46,9 +52,37 @@ namespace AirwatchTools {
 
         //MAIN PAGE BUTTON EVENT HANDLERS
         private void btnAdd_Click(object sender, RoutedEventArgs e) {
+            if (tbAdd.Text.Length > 0) {
+                if (tbInput.Text.Length == 0)
+                    tbInput.Text += tbAdd.Text;
+                else
+                    tbInput.Text += ", " + tbAdd.Text;
 
+                tbAdd.Text = "";
+            }
         }
+        private void btnGenerateList_Click(object sender, RoutedEventArgs e) {
+            ValidateInput val = new ValidateInput(tbInput.Text);
+            bool result = val.IsValid();
 
+            if (result) {
+                List<string> names = val.GetUserList();
+
+                dc.ConsoleInput = ">> " + names.Count.ToString() + " Users in list...";
+                Scroll();
+
+                AdGrabber grabber = new AdGrabber();
+                airwatchEntries = grabber.GetUserInfo(names);
+
+                //ADInfoGetter getter = new ADInfoGetter();
+                //getter.GetUserInfo(name);
+
+                //CsvBuilder builder = new CsvBuilder("andy.csv");
+
+                dc.ConsoleInput = ">> List generated..";
+                Scroll();
+            }
+        }
         private void btnCreateCsv_Click(object sender, RoutedEventArgs e) {
 
         }
@@ -69,6 +103,6 @@ namespace AirwatchTools {
                     tbAdd.Text = "";
                 }
             }
-        }
+        }   
     }
 }

@@ -53,7 +53,7 @@ namespace AirwatchTools {
 
         #region Getters andSetters
         //GETERS AND SETTERS
-        public string Usersname {
+        public string Username {
             get { return username; }
             set {
                 if(username != value) {
