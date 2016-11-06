@@ -24,7 +24,7 @@ namespace AirwatchTools {
             tbAdd.KeyDown += TbInput_KeyDown;
             tbAdd.Background = SystemColors.ControlBrush; ;
 
-            airwatchEntries.Add(new AirWatchEntry { FirstName = "Andy", LastName = "Myers", Active = "1", EmailAddress="me@here.com" });
+            //airwatchEntries.Add(new AirWatchEntry { FirstName = "Andy", LastName = "Myers", Active = "1", EmailAddress="me@here.com" });
         }
 
         //TOOLBAR MENU EVENT HANDLERS
